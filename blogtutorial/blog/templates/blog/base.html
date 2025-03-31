@@ -1,7 +1,29 @@
-<div class="navbar-menu">
-    <div class="navbar-end">
-        <div class="navbar-item">
-            <a class="button is-light" href="{% url 'add_post' %}">Post Blog</a>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .post {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">My Blog</a></h1>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
